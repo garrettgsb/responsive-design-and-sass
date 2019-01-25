@@ -1,0 +1,53 @@
+:root {
+  --bg-color: blanchedalmond;
+  --content-bg-light: aliceblue;
+  --content-bg-dark: dodgerblue;
+  --content-bg-dark-secondary: #bbb;
+  --content-text-light: #bbb;
+  --content-text-dark: #555;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Helvetica Neue";
+  color: var(--gold);
+}
+
+section {
+  background-color: var(--content-bg-light);
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px #222;
+  overflow: hidden;
+}
+
+h1, h2, p {
+  color: var(--content-text-dark);
+  font-weight: 300;
+}
+
+/* SECTION HEADER */
+
+section > header {
+  background-color: var(--content-bg-dark);
+}
+
+section > header > * {
+  color: var(--content-bg-light);
+}
+
+section > header > img {
+  border-radius: 15px;
+}
+
+/* SECTION MAIN */
+
+section > main {
+  border-bottom: 2px solid var(--content-text-dark);
+  border-top: 2px solid var(--content-text-dark);
+}
+
+/* SECTION FOOTER */
+
+section > footer {
+  background: var(--content-bg-light);
+}

@@ -1,0 +1,88 @@
+:root {
+  --bg-color: blanchedalmond;
+  --content-bg-light: aliceblue;
+  --content-bg-dark: dodgerblue;
+  --content-bg-dark-secondary: #bbb;
+  --content-text-light: #bbb;
+  --content-text-dark: #555;
+}
+
+body {
+  font-size: 18px;
+}
+
+main, section {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  align-items: center;
+}
+
+
+section {
+  margin: 2em;
+  overflow: hidden;
+  width: 35em;
+}
+
+/* SECTION HEADER */
+
+section > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+section > header > * {
+  margin: 0;
+  padding: 0 0.5em;
+}
+
+section > header > img {
+  height: 4em;
+}
+
+section > header > .name {
+  font-size: 2em;
+}
+
+/* SECTION MAIN */
+
+section > main {
+  min-height: 10em;
+}
+
+section > main > * {
+  width: calc(100% - 2em);
+}
+
+@media (max-width: 45em) {
+  body {
+    background: burlywood;
+  }
+
+  section {
+    flex-direction: row;
+    justify-content: stretch;
+    width: 90vw;
+  }
+
+
+  section > header > h1, section > header > h2 {
+    display: none;
+  }
+
+  section > main {
+    border: none;
+    flex-grow: 1;
+    min-height: 2em;
+  }
+
+  section > footer {
+    display: none;
+  }
+}

@@ -1,0 +1,35 @@
+body {
+  background-color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+}
+
+body * {
+  margin: 10px;
+}
+
+body > * {
+  width: 98vw;
+}
+
+header, footer {
+  height: 10vh;
+  background-color: dodgerblue;
+}
+
+main {
+  display: flex;
+  min-height: 80vh;
+  margin: 0;
+}
+
+aside {
+  background-color: dodgerblue;
+  min-width: 200px;
+  flex-grow: 1;
+}
+
+article {
+  background-color: dodgerblue;
+  flex-grow: 4;
+}
