@@ -1,8 +1,3 @@
-# Lead In Stuff
-
-* Mobile traffic accounts for more than half of all internet traffic
-  - On some sites, it may be substantially more than half
-
 # What is Responsive Design?
 
 
@@ -23,23 +18,30 @@ The question "How responsive is your page?" is answered by responding to questio
 * "How does the page look on different browsers and platforms?"
 * "How does the page look with images of various sizes?"
 
+# Does it matter if my app looks good on mobile?
+
+* Short answer: Yes.
+* Mobile traffic accounts for more than half of all internet traffic
+  - On some sites, it may be substantially more than half
+
+
 # Approaches to Responsive Design
 
 * Just use Bootstrap (🤮)
 * Adaptive Web Design (Make 3 sites) (Not actually "responsive")
   - Mobile Wikipedia, for example: https://en.m.wikipedia.org/wiki/Main_Page
-* One design; Media queries to configure layout
-* Fluid layout
+* One page; Media queries change what you see dynamically
+* Fluid layout: The page grows and shrinks dynamically and elegantly
 
 --------
 
-* Mobile first vs. Mobile separate vs. Mobile never
+**Design Decision:** Mobile first vs. Mobile separate vs. Mobile never
 
 # Examples of Responsive Design (and also not-very-responsive design)
-[Some eCommerce Site](http://juicedboards.com/) - Very bread-and-butter responsiveness
-[BBC.com](bbc.com) - More advanced information architecture at different viewport sizes
-[Peaceful Restaurant](http://peacefulrestaurant.com/) - Uh oh.
-[Guilt & Company](http://www.guiltandcompany.com/) - Beautiful site, _not_ mobile responsive
+* [Some eCommerce Site](http://juicedboards.com/) - Very bread-and-butter responsiveness
+* [BBC.com](bbc.com) - More advanced information architecture at different viewport sizes
+* [Peaceful Restaurant](http://peacefulrestaurant.com/) - Uh oh.
+* [Guilt & Company](http://www.guiltandcompany.com/) - Beautiful site, _not_ mobile responsive
 
 # Plan A: Layouts that are inherently responsive
 
@@ -53,11 +55,11 @@ The intent is that the designer will have done some thinking about things such a
 
 But it isn't so simple. That may be true for the design of a page in a newspaper or magazine, but this is the web: The text will not be uniform-- How will the page adjust if the text content is much longer or much shorter than in the wireframe? The number of menu items may be variable. The window can end up being much wider or much narrower than intended.
 
-## Flexbox
+# Flexbox
 
 `<opinion>`Flexbox is not the _only_ correct way to do layout, but it's the _most_ correct way to do layout.`</opinion>`
 
-### Key Terminology
+## Key Terminology
 
 **Flex container:** The parent element, which has `display: flex` applied to it.
 
@@ -71,12 +73,12 @@ But it isn't so simple. That may be true for the design of a page in a newspaper
 
 **Align:** How things are arranged on the cross axis.
 
-### Getting Started
+## Getting Started
 
 Flexbox is very powerful and expressive, but to get started with it, you only need to know four properties:
 
 | Property  | Values | Default Value | What It's For |
-| --------- | ------ | ------------------ |
+| --------- | ------ | ------------- | ------------- |
 | `display` | `flex` | `block`/`inline`, usually | Tells a container that it's a flexbox, and all of its children are flex items |
 | `flex-direction` | `row`, `column` | `row` | Determines whether the flex items line up horizontally (`row`) or vertically (`column`) |
 | `justify-content` | `flex-start`, `flex-end`, `center`, `space-around`, `space-between`, `space-evenly`, `stretch` | `flex-start` | How items are arranged along the **main axis** |
@@ -84,7 +86,7 @@ Flexbox is very powerful and expressive, but to get started with it, you only ne
 
  **Note:** Value lists are not exhaustive, but contain the ones that we are most interested in.
 
-### Super Simple Sample
+## Super Simple Sample
 
 The following HTML will generate a simple flexbox: Four paragraphs, arranged in a row.
 
@@ -106,7 +108,9 @@ section {
 ```
 
 
-### The Holy Grail
+## The Holy Grail
+
+[Example](https://garrettgsb.github.io/responsive-design-and-sass/01-holy-grail/holy-grail.html)
 
 This layout was considered almost unattainable (or at least, unattainable without great sacrifice) for many years. With Flexbox though, it's easy. Here is what the layout looks like:
 
@@ -141,7 +145,9 @@ main {
 
 There's a little bit more to it than that, but essentially, we are ready to start making decisions about things like what **content** the layout will have (and how it will behave), what the `min-width` and `max-width` of the different elements will be, and when the page will switch to a **different layout strategy**.
 
-### Making Responsive Cards with Flexbox
+## Making Responsive Cards with Flexbox
+
+[Example](https://garrettgsb.github.io/responsive-design-and-sass/02-cards/index.html)
 
 * `section` represents the card
   - Flex column
@@ -254,6 +260,7 @@ This meta tag says to the browser "This page's width adapts to the width of your
 Details:
 
 http://www.javierusobiaga.com/blog/stop-using-the-viewport-tag-until-you-know-ho/
+
 https://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972
 
 # SASS
