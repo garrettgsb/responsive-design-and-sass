@@ -107,10 +107,19 @@ section {
 </section>
 ```
 
+## Fluid Layout
+
+[Example](https://garrettgsb.github.io/responsive-design-and-sass/01-fluid-layout/fluid-layout.html)
+
+With Flexbox, instead of defining rigid dimensions, we simply **describe the behavior that we want** and then let Flexbox determine the correct size of elements on the fly, based on the **contents and context** that the element is given.
+
+By doing our layouts in this way, they are fluid, dynamic, and **inherently responsive.** That doesn't abolish the need for other responsive layout tools, but it significantly reduces the amount of repetitive work that needs to be done to make a single view look good in a variety of circumstances.
+
+In the example above, we leverage the `flex-grow` and `flex-shrink` properties, as well as `min-width`s, to establish a plan for how elements on the page change sizes.
 
 ## The Holy Grail
 
-[Example](https://garrettgsb.github.io/responsive-design-and-sass/01-holy-grail/holy-grail.html)
+[Example](https://garrettgsb.github.io/responsive-design-and-sass/02-holy-grail/holy-grail.html)
 
 This layout was considered almost unattainable (or at least, unattainable without great sacrifice) for many years. With Flexbox though, it's easy. Here is what the layout looks like:
 
@@ -147,7 +156,7 @@ There's a little bit more to it than that, but essentially, we are ready to star
 
 ## Making Responsive Cards with Flexbox
 
-[Example](https://garrettgsb.github.io/responsive-design-and-sass/02-cards/index.html)
+[Example](https://garrettgsb.github.io/responsive-design-and-sass/03-cards/index.html)
 
 * `section` represents the card
   - Flex column
