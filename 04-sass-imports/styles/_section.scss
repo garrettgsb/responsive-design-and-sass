@@ -1,0 +1,20 @@
+section {
+  margin: 2em;
+  overflow: hidden;
+  width: 35em;
+
+  background-color: var(--content-bg-light);
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px #222;
+  overflow: hidden;
+
+  @media (max-width: 45em) {
+    flex-direction: row;
+    justify-content: stretch;
+    width: 90vw;
+  }
+
+  @import 'header';
+  @import 'main';
+  @import 'footer';
+}

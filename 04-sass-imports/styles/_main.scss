@@ -1,0 +1,16 @@
+main {
+  min-height: 10em;
+
+  border-bottom: 2px solid var(--content-text-dark);
+  border-top: 2px solid var(--content-text-dark);
+
+  @media (max-width: 45em) {
+    border: none;
+    flex-grow: 1;
+    min-height: 2em;
+  }
+
+  * {
+    width: calc(100% - 2em);
+  }
+}

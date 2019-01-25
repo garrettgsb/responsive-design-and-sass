@@ -1,0 +1,6 @@
+footer {
+  background: var(--content-bg-light);
+  @media (max-width: 45em) {
+    display: none;
+  }
+}

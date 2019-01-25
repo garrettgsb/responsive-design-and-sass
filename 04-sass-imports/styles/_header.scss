@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0.5em 0;
+
+  background-color: var(--content-bg-dark);
+  > * {
+    margin: 0;
+    padding: 0 0.5em;
+
+    color: var(--content-bg-light);
+  }
+
+  h1, h2 {
+    @media (max-width: 45em) {
+      display: none;
+    }
+  }
+
+  img {
+    height: 4em;
+    border-radius: 15px;
+  }
+
+  .name {
+    font-size: 2em;
+  }
+}

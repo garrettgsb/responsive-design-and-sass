@@ -1,0 +1,35 @@
+:root {
+  --bg-color: blanchedalmond;
+  --content-bg-light: aliceblue;
+  --content-bg-dark: dodgerblue;
+  --content-bg-dark-secondary: #bbb;
+  --content-text-light: #bbb;
+  --content-text-dark: #555;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Helvetica Neue";
+  color: var(--gold);
+  font-size: 18px;
+
+  @media (max-width: 45em) {
+    background: burlywood;
+  }
+
+  main {
+    align-items: center;
+  }
+}
+
+main, section {
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, p {
+  color: var(--content-text-dark);
+  font-weight: 300;
+}
+
+@import 'section';
