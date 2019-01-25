@@ -260,26 +260,84 @@ https://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-
 
 https://sass-lang.com/
 
+SASS is a CSS preprocessor. A preprocessor is a piece of software that turns some code (SCSS in this case) into some other code (ordinary CSS). **All CSS is valid SCSS**. The significance of this is that in your SCSS, you can just write any normal CSS and it will work as normal.
 
+But we can also do some cool stuff in our SCSS that really helps us scale our stylesheets:
 
-# Useful Stuff
+## Nesting
 
-* overflow: hidden;
-* 100vw;
-* display: flex;
-  - flex-direction: column;
-  - justify-content: space-around | space-between | flex-start | flex-end;
-* div[class*='small-']
+One of the greatest features that SASS gives us is nesting. That allows us to turn regular CSS like this:
+
+```
+section {
+  display: flex;
+}
+
+section > header {
+  background: dodgerblue;
+}
+
+section > main {
+  background: goldenrod;
+}
+
+section > footer {
+  background: tomato;
+}
+```
+
+Into something more like this:
+
+```
+section {
+  display: flex;
+  > header {
+    background: dodgerblue;
+  }
+  > main {
+    background: goldenrod;
+  }
+  > footer {
+    background: tomato;
+  }
+}
+```
+
+## Partials and Imports
+
+We can also organize our stylesheets with partials, which we can then import just about anywhere we feel like-- Much how `ejs` partials work.
+
+So we can take our CSS from the previous section and refactor it to look like this:
+
+**style.scss**
+```
+section {
+  display: flex;
+  > header {
+    background: dodgerblue;
+  }
+  > main {
+    background: goldenrod;
+  }
+  @import 'footer';
+}
+```
+
+**_footer.scss**
+```
+> footer {
+  background: tomato;
+}
+```
+
+This example is simplified, but as stylesheets get very very long, this is a powerful way to help break down your code and keep it organized. Of course, you can `@import` the same file in many different places, which helps DRY out your code.
+
+## Other Cool Stuff that SASS Does
+
+SASS has other neat tools, like mixins and inheritance, which help you organize your styles in more sophisticated ways. For a full list of SASS' features, check out the [guide page](https://sass-lang.com/guide), or ask Joel.
 
 # References
 
 The article that coined the term (and described in detail the concept of) "Responsive Design:" https://alistapart.com/article/responsive-web-design
 
 Everything you need to know about Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
-# Blerp
-
-Making a responsive table
-  - Emoji column headers?
-  - Ellipsis overflow...?
-  - Card view......? <- Adaptive design
