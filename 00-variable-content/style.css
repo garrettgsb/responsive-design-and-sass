@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  background: whitesmoke;
+}
+
+main > * {
+  margin: 2em;
+}
+
+.output-area {
+  /* display: grid; */
+  grid-template-columns: 1fr 3fr;
+  justify-content: flex-end;
+}
+h6 {
+  width: max-content;
+  text-align: right;
+}
+
+input, p {
+  border-radius: 4px;
+  background: white;
+}
+
+input {
+  width: 10rem;
+  padding: 0.5rem;
+
+  border: none;
+  border-bottom: 1px solid #aaa;
+
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+  transition: 0.5s;
+}
+
+input:focus {
+  border-bottom: 2px solid #888;
+  box-shadow: 4px 4px 6px rgba(0,0,0,0.4);
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+p {
+  max-width: 30em;
+  margin: 0.5em;
+  padding: 1em;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+}
+
+.stretch {
+  max-width: max-content;
+}
+
+.wrap {
+  word-wrap: break-word;
+}
+
+.columns {
+  display: none;
+  columns: 3;
+  word-wrap: break-word;
+  /* column-fill: auto; */
+  /* max-height: 4em; */
+}
+
+.truncate {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scroll-x {
+  overflow-x: scroll;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scroll-y {
+  max-height: 2em;
+  overflow-y: scroll;
+  text-overflow: ellipsis;
+}

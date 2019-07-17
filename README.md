@@ -39,8 +39,9 @@ The question "How responsive is your page?" is answered by responding to questio
 
 # Examples of Responsive Design (and also not-very-responsive design)
 * [Some eCommerce Site](http://juicedboards.com/) - Very bread-and-butter responsiveness
-* [BBC.com](bbc.com) - More advanced information architecture at different viewport sizes
-* [Peaceful Restaurant](http://peacefulrestaurant.com/) - Uh oh.
+* [BBC.com](http://bbc.com) - More advanced information architecture at different viewport sizes
+* [Peaceful Restaurant](http://peacefulrestaurant.com/) - ~Uh oh.~ Their site actually got alot better!
+* [Amazon](http://amazon.ca) - How does Amazon handle responsiveness?
 * [Guilt & Company](http://www.guiltandcompany.com/) - Beautiful site, _not_ mobile responsive
 
 # Plan A: Layouts that are inherently responsive
