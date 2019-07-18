@@ -364,6 +364,18 @@ section {
 
 This example is simplified, but as stylesheets get very very long, this is a powerful way to help break down your code and keep it organized. Of course, you can `@import` the same file in many different places, which helps DRY out your code.
 
+## Running SASS
+
+On larger projects, you might have the server run SASS automatically when you recompile the app from source or something. On smaller projects though, you might want to run Sass manually.
+
+After installing it (you can check to see if it's installed with `which sass`), you could run a command like this:
+
+```
+sass --watch **/*.scss
+```
+
+This tells the SASS compiler to watch every file with the `.scss` extension in every directory inside of the current directory for changes, and output a regular `.css` file to the same directory.
+
 ## Other Cool Stuff that SASS Does
 
 SASS has other neat tools, like mixins and inheritance, which help you organize your styles in more sophisticated ways. For a full list of SASS' features, check out the [guide page](https://sass-lang.com/guide), or ask Joel.
