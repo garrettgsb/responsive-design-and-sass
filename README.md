@@ -58,7 +58,7 @@ But it isn't so simple. That may be true for the design of a page in a newspaper
 
 ## Variable content
 
-![Example](https://garrettgsb.github.io/responsive-design-and-sass/00-variable-content/variable-content.html)
+[Example](https://garrettgsb.github.io/responsive-design-and-sass/00-variable-content/variable-content.html)
 
 Therefore, the first question a developer should ask before designing a responsive layout is "What content must these different components accomodate?" If user input is involved, what are the limitations on that? For example, if someone can make an account name that is 200 characters long, then everywhere that an account name appears must be able to handle names that are 200 characters long! Otherwise, maybe it's time to apply a constraint: Account names can only be _twenty_ characters long. How would Twitter (or... Tweeter) look if tweets could be 500 words long? How would Instagram's UI be affected if you could post images that were 10px tall and 500px wide?
 
