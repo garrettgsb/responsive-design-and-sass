@@ -58,7 +58,7 @@ p {
 }
 
 .stretch {
-  max-width: max-content;
+  min-width: max-content;
 }
 
 .wrap {

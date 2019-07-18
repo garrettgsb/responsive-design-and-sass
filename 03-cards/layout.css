@@ -1,16 +1,3 @@
-:root {
-  --bg-color: blanchedalmond;
-  --content-bg-light: aliceblue;
-  --content-bg-dark: dodgerblue;
-  --content-bg-dark-secondary: #bbb;
-  --content-text-light: #bbb;
-  --content-text-dark: #555;
-}
-
-body {
-  font-size: 18px;
-}
-
 main, section {
   display: flex;
   flex-direction: column;
@@ -20,6 +7,7 @@ main {
   align-items: center;
 }
 
+/* CARDS */
 
 section {
   margin: 2em;
@@ -44,10 +32,6 @@ section > header > * {
 
 section > header > img {
   height: 4em;
-}
-
-section > header > .name {
-  font-size: 2em;
 }
 
 /* SECTION MAIN */

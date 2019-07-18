@@ -9,7 +9,7 @@
 
 **Better Definition**
 
-> _Responsive design is a page's ability to respond to variable content and variable contexts._
+> _Responsive design is a page's ability to continue to look good across a wide variety of contents and contexts._
 
 The question "How responsive is your page?" is answered by responding to questions like:
 
@@ -40,7 +40,7 @@ The question "How responsive is your page?" is answered by responding to questio
 # Examples of Responsive Design (and also not-very-responsive design)
 * [Some eCommerce Site](http://juicedboards.com/) - Very bread-and-butter responsiveness
 * [BBC.com](http://bbc.com) - More advanced information architecture at different viewport sizes
-* [Peaceful Restaurant](http://peacefulrestaurant.com/) - ~Uh oh.~ Their site actually got alot better!
+* [Peaceful Restaurant](http://peacefulrestaurant.com/) - ~Uh oh.~ Their site actually got alot better since the last time we looked at it!
 * [Amazon](http://amazon.ca) - How does Amazon handle responsiveness?
 * [Guilt & Company](http://www.guiltandcompany.com/) - Beautiful site, _not_ mobile responsive
 
@@ -55,6 +55,20 @@ Often, a developer will receive a wireframe design like the following:
 The intent is that the designer will have done some thinking about things such as proportions, margins, sizes, and perhaps font faces and colors. The developer has just to implement what the designer dreamed up. It'll be 45 minutes, tops.
 
 But it isn't so simple. That may be true for the design of a page in a newspaper or magazine, but this is the web: The text will not be uniform-- How will the page adjust if the text content is much longer or much shorter than in the wireframe? The number of menu items may be variable. The window can end up being much wider or much narrower than intended.
+
+## Variable content
+
+![Example](https://garrettgsb.github.io/responsive-design-and-sass/00-variable-content/variable-content.html)
+
+Therefore, the first question a developer should ask before designing a responsive layout is "What content must these different components accomodate?" If user input is involved, what are the limitations on that? For example, if someone can make an account name that is 200 characters long, then everywhere that an account name appears must be able to handle names that are 200 characters long! Otherwise, maybe it's time to apply a constraint: Account names can only be _twenty_ characters long. How would Twitter (or... Tweeter) look if tweets could be 500 words long? How would Instagram's UI be affected if you could post images that were 10px tall and 500px wide?
+
+Once you know some of these requirements, the next question to ask should be "What happens at either end of the requirements scale?" What does this box look like when it's empty? What about when it overflows?
+
+> _When you build a responsive layout, you are not just configuring static boxes on a static canvas... You are programming the **behavior** of those boxes, and the things that fill them._
+
+Built into every webpage is **behavior** that defines how elements change in response to content, and in response to the things around it. The facts that words wrap and paragraphs stack are part of the behavior that **browsers default to**, and when they are not what we prefer, they can be overridden. Almost any rule about how to respond to variable content can be overridden-- We just need to decide what we want.
+
+Flexbox is a good place to start.
 
 # Flexbox
 
@@ -203,6 +217,7 @@ So how does this desktop vs. mobile plan work?
 
 # Plan B: Media Queries
 
+* Plan B is for when the limitations of your fluid design plan are exceeded
 * Plan B should usually be used in conjunction with (not instead of) Plan A.
 * A media query has a **media type** and a number of **media feature** expressions.
 * They can be combined with logical operators
@@ -229,7 +244,7 @@ For responsive design, however, the most common thing that we care about is view
 
 ### min-width and max-width
 
-Usually, we will use a **range prefix** on the width attribute to say "All pixel ranges that are greater/less than n," where n is the number of pixels (or ems, or some other unit).
+Usually, we will use a **range prefix** on the width attribute to say "All pixel ranges that are greater/less than n," where n is the number of pixels (or ems, or some other unit). These minimum and maximum values are often called **breakpoints**, or the point at which the CSS engine "breaks" into another layout plan.
 
 | Attribute | Behavior | Example |
 | --------- | -------- | ------- |

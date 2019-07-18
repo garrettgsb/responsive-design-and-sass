@@ -9,8 +9,9 @@
 
 body {
   background-color: var(--bg-color);
-  font-family: "Helvetica Neue";
   color: var(--gold);
+  font-family: "Helvetica Neue";
+  font-size: 18px;
 }
 
 section {
@@ -50,4 +51,5 @@ section > main {
 
 section > footer {
   background: var(--content-bg-light);
+  padding: 0 1em;
 }
