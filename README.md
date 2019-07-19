@@ -97,7 +97,7 @@ Flexbox is very powerful and expressive, but to get started with it, you only ne
 | `display` | `flex` | `block`/`inline`, usually | Tells a container that it's a flexbox, and all of its children are flex items |
 | `flex-direction` | `row`, `column` | `row` | Determines whether the flex items line up horizontally (`row`) or vertically (`column`) |
 | `justify-content` | `flex-start`, `flex-end`, `center`, `space-around`, `space-between`, `space-evenly`, `stretch` | `flex-start` | How items are arranged along the **main axis** |
-| `align-items` | `baseline`, `flex-start`, `flex-end`, `center`, `space-around`, `space-between`, `space-evenly`, `stretch` | `stretch` | How items are arranged along the **main axis** |
+| `align-items` | `baseline`, `flex-start`, `flex-end`, `center`, `space-around`, `space-between`, `space-evenly`, `stretch` | `stretch` | How items are arranged along the **cross axis** |
 
  **Note:** Value lists are not exhaustive, but contain the ones that we are most interested in.
 
