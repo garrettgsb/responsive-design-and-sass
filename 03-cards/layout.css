@@ -56,7 +56,7 @@ section > main > * {
   }
 
 
-  section > header > h1, section > header > h2 {
+  section > header > h1, section > header > h2, section > footer {
     display: none;
   }
 
@@ -64,9 +64,5 @@ section > main > * {
     border: none;
     flex-grow: 1;
     min-height: 2em;
-  }
-
-  section > footer {
-    display: none;
   }
 }
